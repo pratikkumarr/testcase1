@@ -1,0 +1,150 @@
+Test Case 1
+Commands :
+  whoami
+  w
+  last
+  uname -a
+  hostname
+  uptime
+  sudo groupadd developers
+  sudo groupadd qa
+  sudo useradd -m -G developers aman
+  sudo useradd -m -G developers ritu
+  sudo useradd -m -G qa karan
+  cat /etc/group
+  id aman
+  id karan
+  sudo pkill -u ritu
+  sudo userdel -r ritu
+  id ritu
+
+
+attri@PratikHP:~$ whoami
+attri
+attri@PratikHP:~$ w
+ 13:52:12 up 0 min,  1 user,  load average: 0.10, 0.03, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+attri    pts/1    -                13:51   29.00s  0.01s  0.01s -bash
+attri@PratikHP:~$ last
+reboot   system boot  6.6.87.2-microso Fri Apr 24 13:51   still running
+reboot   system boot  6.6.87.2-microso Fri Apr 24 12:54 - 13:06  (00:12)
+reboot   system boot  6.6.87.2-microso Fri Apr 24 12:53 - 12:54  (00:00)
+reboot   system boot  6.6.87.2-microso Fri Apr 17 15:42 - 12:54 (6+21:11)
+reboot   system boot  6.6.87.2-microso Fri Apr 17 00:06 - 12:54 (7+12:47)
+reboot   system boot  6.6.87.2-microso Sat Apr 11 23:52 - 23:55  (00:03)
+reboot   system boot  6.6.87.2-microso Mon Mar 30 15:23 - 23:55 (12+08:31)
+reboot   system boot  6.6.87.2-microso Mon Mar 30 14:03 - 14:04  (00:00)
+reboot   system boot  6.6.87.2-microso Mon Mar 30 14:02 - 14:02  (00:00)
+reboot   system boot  6.6.87.2-microso Mon Mar 30 14:01 - 14:01  (00:00)
+reboot   system boot  6.6.87.2-microso Mon Mar 30 13:55 - 13:58  (00:03)
+reboot   system boot  6.6.87.2-microso Fri Mar 27 16:03 - 13:58 (2+21:55)
+reboot   system boot  6.6.87.2-microso Fri Mar 27 15:42 - 16:02  (00:20)
+reboot   system boot  6.6.87.2-microso Tue Mar 17 19:28 - 19:29  (00:00)
+reboot   system boot  6.6.87.2-microso Tue Mar 17 19:20 - 19:21  (00:00)
+reboot   system boot  6.6.87.2-microso Tue Mar 17 18:52 - 18:52  (00:00)
+reboot   system boot  6.6.87.2-microso Tue Mar 17 18:49 - 18:49  (00:00)
+reboot   system boot  6.6.87.2-microso Thu Feb 26 14:22 - 15:01  (00:38)
+reboot   system boot  6.6.87.2-microso Mon Feb 23 15:32 - 16:52  (01:20)
+reboot   system boot  6.6.87.2-microso Mon Feb 16 14:07 - 14:49  (00:41)
+reboot   system boot  6.6.87.2-microso Sat Feb 14 21:35 - 21:36  (00:00)
+reboot   system boot  6.6.87.2-microso Sat Feb 14 21:20 - 21:20  (00:00)
+reboot   system boot  6.6.87.2-microso Fri Feb 13 15:48 - 16:35  (00:47)
+reboot   system boot  6.6.87.2-microso Mon Feb  9 16:30 - 16:46  (00:16)
+reboot   system boot  6.6.87.2-microso Mon Feb  9 15:48 - 16:26  (00:38)
+reboot   system boot  6.6.87.2-microso Sun Feb  8 23:25 - 00:43  (01:18)
+reboot   system boot  6.6.87.2-microso Sat Feb  7 23:58 - 00:51  (00:53)
+reboot   system boot  6.6.87.2-microso Sat Feb  7 23:43 - 23:56  (00:13)
+reboot   system boot  6.6.87.2-microso Fri Feb  6 20:52 - 20:52  (00:00)
+reboot   system boot  6.6.87.2-microso Fri Feb  6 16:00 - 16:18  (00:18)
+reboot   system boot  6.6.87.2-microso Thu Feb  5 21:47 - 21:47  (00:00)
+reboot   system boot  6.6.87.2-microso Tue Feb  3 10:56 - 10:56  (00:00)
+reboot   system boot  6.6.87.2-microso Tue Feb  3 09:15 - 09:19  (00:04)
+reboot   system boot  6.6.87.2-microso Mon Feb  2 21:57 - 00:00  (02:03)
+
+wtmp begins Mon Feb  2 21:57:09 2026
+attri@PratikHP:~$ uname -a
+Linux PratikHP 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+attri@PratikHP:~$ hostname
+PratikHP
+attri@PratikHP:~$ uptime
+ 13:53:00 up 1 min,  1 user,  load average: 0.04, 0.02, 0.00
+attri@PratikHP:~$ sudo groupadd developers
+[sudo] password for attri:
+attri@PratikHP:~$ sudo groupadd qa
+attri@PratikHP:~$ sudo useradd -m -G developers aman
+attri@PratikHP:~$ sudo useradd -m -G developers ritu
+attri@PratikHP:~$ sudo useradd -m -G qa karan
+attri@PratikHP:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,attri
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:attri
+floppy:x:25:
+tape:x:26:
+sudo:x:27:attri
+audio:x:29:
+dip:x:30:attri
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:attri
+staff:x:50:
+games:x:60:
+users:x:100:attri,ram
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+_ssh:x:104:
+landscape:x:105:
+polkitd:x:990:
+admin:x:106:
+netdev:x:107:
+attri:x:1000:
+ram:x:1001:
+developer:x:1002:ram,attri
+docker:x:1003:attri
+developers:x:1004:aman,ritu
+qa:x:1005:karan
+aman:x:1006:
+ritu:x:1007:
+karan:x:1008:
+attri@PratikHP:~$ id aman
+uid=1002(aman) gid=1006(aman) groups=1006(aman),1004(developers)
+attri@PratikHP:~$ id karan
+uid=1004(karan) gid=1008(karan) groups=1008(karan),1005(qa)
+attri@PratikHP:~$ sudo pkill -u ritu
+attri@PratikHP:~$ sudo userdel -r ritu
+userdel: ritu mail spool (/var/mail/ritu) not found
+attri@PratikHP:~$ id ritu
+id: ‘ritu’: no such user
